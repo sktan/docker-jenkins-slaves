@@ -1,7 +1,8 @@
 FROM sktan/jenkins-slave:latest
 
 # Setup base requirements
-RUN yum install -y python3 python3-pip npm
+RUN amazon-linux-extras install epel && \
+    yum install -y python3 python3-pip npm
 
-# Install language framework requirements
+# Install AWS tools (awscli, boto3 and serverless)
 RUN pip3 install boto3 awscli && npm install -g serverless
