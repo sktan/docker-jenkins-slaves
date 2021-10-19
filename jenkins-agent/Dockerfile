@@ -7,7 +7,7 @@ ENV JENKINS_NODE_NAME jenkins-remote-agent
 env JENKINS_NODE_SECRET "@/run/secrets/jenkins-remote-agent-secret"
 
 # Setup base requirements
-RUN yum install git curl python3 python3-pip -y
+RUN yum install git curl openssh-client python3 python3-pip -y
 
 # Setup Jenkins user and scripts
 RUN adduser --home ${JENKINS_HOME} jenkins
