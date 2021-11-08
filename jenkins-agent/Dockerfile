@@ -1,4 +1,4 @@
-FROM amazoncorretto:11
+FROM amazoncorretto:8
 
 # Environment Variables
 ENV JENKINS_HOME /var/lib/jenkins
